@@ -15,7 +15,7 @@ int main()
         }
         for(j=0;j<2*(n-i-1);j++)
         {
-            cout<<"*";
+            cout<<" ";
         }
         int k=i+1;
         for(j=0;j<i+1;j++)
