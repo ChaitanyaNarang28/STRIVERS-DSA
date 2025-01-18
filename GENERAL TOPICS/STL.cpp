@@ -77,6 +77,7 @@ void Vector()
         cout << elem << " ";  // Print each element
     }
     cout << endl;
+    
     }
 
 
