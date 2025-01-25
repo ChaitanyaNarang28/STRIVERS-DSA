@@ -2,16 +2,16 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-int cnt=0,sum=0;
+int cnt=0;
 
 int print(int n)
 {
     if(cnt==n)
     {
-        cout<<sum<<endl;
+        return 1;
     }
+    cout<<cnt+1<<endl;
     cnt++;
-    sum=sum+cnt;
     print(n);
 }
 

@@ -1,17 +1,17 @@
-// PRINT LINEARLY FROM 1 TO N
+// PRINT LINEARLY FROM N TO 1
 
 #include<bits/stdc++.h>
 using namespace std;
-int cnt=0,sum=0;
+int cnt;
 
 int print(int n)
 {
     if(cnt==n)
     {
-        cout<<sum<<endl;
+        return 1;
     }
+    cout<<(n-cnt)<<endl;
     cnt++;
-    sum=sum+cnt;
     print(n);
 }
 
@@ -20,5 +20,5 @@ int main()
     int n;
     cout<<"Enter the no of times to be printed: ";
     cin>>n;
-    print(n);
+    print(5);
 }
