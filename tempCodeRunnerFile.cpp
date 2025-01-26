@@ -1,24 +1,27 @@
-// PRINT LINEARLY FROM 1 TO N
+// REVERSE AN ARRAYS
 
 #include<bits/stdc++.h>
 using namespace std;
-int cnt=0,sum=0;
 
-int print(int n)
-{
-    if(cnt==n)
-    {
-        cout<<sum<<endl;
-    }
-    cnt++;
-    sum=sum+cnt;
-    print(n);
-}
+int rev[5],cnt=0;
+
+// int reverse(int n[])
+// {
+//     if(cnt==5)
+//     {
+        
+//     }
+//     rev[cnt]=n[(5-cnt-1)];
+//     cout<<rev[cnt];
+//     cnt++;
+//     reverse(n);
+
+// }
+
 
 int main()
 {
-    int n;
-    cout<<"Enter the no of times to be printed: ";
-    cin>>n;
-    print(n);
+    string name("naman");
+    cout<<name.size();
 }
+
