@@ -19,24 +19,15 @@ int main()
         cout<<arr[i]<<" ";
     }
 
-    int m=arr[0];
-    int s=arr[0];
-    for(int i=1;i<n;i++)
+    for(int i=0;i<n-1;i++)
     {
-        if(arr[i]>m)
-        {
-            m=arr[i];
-        }
+        swap(arr[i],arr[i+1]);
     }
 
-    cout<<endl<<"Largest element is: "<<m;
-
+    cout<<endl<<"Updated  Array is: ";
     for(int i=0;i<n;i++)
     {
-        if(arr[i]>s && arr[i]!=m)
-        {
-            s=arr[i];
-        }
+        cout<<arr[i]<<" ";
     }
-    cout<<endl<<"Smallest no is: "<<s;
+
 }

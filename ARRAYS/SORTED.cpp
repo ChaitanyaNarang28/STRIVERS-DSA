@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n;
+    int n,flag=0;
     cout<<"Enter the size of Array: ";
     cin>>n;
     int arr[n];
@@ -19,24 +19,21 @@ int main()
         cout<<arr[i]<<" ";
     }
 
-    int m=arr[0];
-    int s=arr[0];
-    for(int i=1;i<n;i++)
-    {
-        if(arr[i]>m)
-        {
-            m=arr[i];
-        }
-    }
-
-    cout<<endl<<"Largest element is: "<<m;
-
     for(int i=0;i<n;i++)
     {
-        if(arr[i]>s && arr[i]!=m)
+        if(arr[i+1]<arr[i])
         {
-            s=arr[i];
+            cout<<endl<<"Not sorted";
+            return 0;
         }
+        else
+        {
+            flag=1;
+        }
+        
     }
-    cout<<endl<<"Smallest no is: "<<s;
+    if(flag==1)
+    {
+        cout<<"Sorted array:";
+    }
 }

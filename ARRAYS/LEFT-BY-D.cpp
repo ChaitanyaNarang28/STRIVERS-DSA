@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n;
+    int n,d,rotate;
     cout<<"Enter the size of Array: ";
     cin>>n;
     int arr[n];
@@ -19,24 +19,25 @@ int main()
         cout<<arr[i]<<" ";
     }
 
-    int m=arr[0];
-    int s=arr[0];
-    for(int i=1;i<n;i++)
+    cout<<endl<<"Enter the no of times rotations to be done:";
+    cin>>d;
+    rotate=d%n;
+
+    while(rotate>0)
     {
-        if(arr[i]>m)
+        for(int i=0;i<n-1;i++)
         {
-            m=arr[i];
+        swap(arr[i],arr[i+1]);
         }
+        rotate--;
     }
 
-    cout<<endl<<"Largest element is: "<<m;
+    
 
+    cout<<endl<<"Updated  Array is: ";
     for(int i=0;i<n;i++)
     {
-        if(arr[i]>s && arr[i]!=m)
-        {
-            s=arr[i];
-        }
+        cout<<arr[i]<<" ";
     }
-    cout<<endl<<"Smallest no is: "<<s;
+
 }
