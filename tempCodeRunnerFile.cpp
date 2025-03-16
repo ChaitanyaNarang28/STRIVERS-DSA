@@ -1,27 +1,43 @@
-// REVERSE AN ARRAYS
-
 #include<bits/stdc++.h>
 using namespace std;
 
-int rev[5],cnt=0;
-
-// int reverse(int n[])
-// {
-//     if(cnt==5)
-//     {
+int slargest(int n, int arr[])
+{
+    int m=arr[0];
+    int s=arr[0];
+    for(int i=1;i<n;i++)
+    {
+        if(arr[i]>m)
+        {
+            m=arr[i];
+        }
+        if(arr[i]>s && arr[i]<m)
+        {
+            s=arr[i];
+        }
         
-//     }
-//     rev[cnt]=n[(5-cnt-1)];
-//     cout<<rev[cnt];
-//     cnt++;
-//     reverse(n);
-
-// }
-
+    }
+    return s;
+}
 
 int main()
 {
-    string name("naman");
-    cout<<name.size();
-}
+    int n,m;
+    cout<<"Enter the size of Array: ";
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter "<<i+1<<" th element: ";
+        cin>>arr[i];
+    }
 
+    cout<<"Entered Array is: ";
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+
+    m=slargest(n,arr);
+    cout<<endl<<"The Second largest Element is: "<<m;
+}
