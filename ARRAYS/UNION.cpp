@@ -30,17 +30,15 @@ int main()
         s.insert(a2[i]);
     }
 
-    int u[s.size()];
-    int i=0;
+    vector<int> arr;
     for(auto it : s)
     {
-        u[i] = it;
-        i++;
+       arr.push_back(it);
     }
     cout<<endl<<"Union of 2 arrays is: ";
-    for(int j=0;j<i;j++)
+    for(int j=0;j<arr.size();j++)
     {
-        cout<<u[j]<<" ";
+        cout<<arr[j]<<" ";
     }
 
 }
