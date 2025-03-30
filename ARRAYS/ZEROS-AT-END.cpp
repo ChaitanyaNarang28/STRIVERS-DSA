@@ -64,18 +64,16 @@ int main()
         cout << arr[i] << " ";
     }
 
-    for(int i = 0; i < n; i++)
+   int j=0;
+   for(int i=0;i<n;i++)
+   {
+    if(arr[i]!=0)
     {
-        if(arr[i] == 0)
-        {
-            for(int j = i; j < (n - 1); j++)
-            {
-                swap(arr[j], arr[j + 1]);
-            }
-            sum = sum + 1;
-            i = i - 1;  // ✅ Recheck current position
-        }
+        swap(arr[i],arr[j]);
+        j++;
     }
+    
+   }
 
     cout << endl << "Updated Array is: ";
     for(int i = 0; i < n; i++)
