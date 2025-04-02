@@ -3,27 +3,29 @@ using namespace std;
 
 int main()
 {
-    int n,xorr=0;
-    cout<<"Enter the max no: ";
+    int n;
+    cout<<"Enter the size of array:";
     cin>>n;
     int arr[n];
-    cout<<"Enter the array: ";
     for(int i=0;i<n;i++)
     {
-        cout<<"Enter "<<i+1<<" Element: ";
+        cout<<"Enter "<<i+1<<" element: ";
         cin>>arr[i];
     }
 
-    cout<<"Your entered array is: ";
+    cout<<endl<<"entered array is: ";
     for(int i=0;i<n;i++)
     {
         cout<<arr[i]<<" ";
     }
 
+
+    int xorr=0;
     for(int i=0;i<n;i++)
     {
         xorr=xorr^arr[i];
     }
 
-    cout<<endl<<"No that appears only 1 time is: "<<xorr;
+    cout<<endl<<"The number appearing one time is: "<<xorr;
+
 }
