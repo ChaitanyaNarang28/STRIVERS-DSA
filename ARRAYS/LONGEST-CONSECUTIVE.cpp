@@ -7,8 +7,7 @@ int main()
     cout << "Enter the size of array: ";
     cin >> n;
 
-   int arr[n];
-
+   vector<int> arr(n);
     for(int i = 0; i < n; i++)
     {
         cout << "Enter " << i + 1 << " element: ";
@@ -27,7 +26,7 @@ int main()
     int length=1;
     int small=INT_MIN;
 
-    for(i=0;i<n;i++)
+    for(int i=0;i<n;i++)
     {
         if(arr[i]-1==small)
         {

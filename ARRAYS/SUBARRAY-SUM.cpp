@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n,i;
+    int n;
     cout << "Enter the size of array: ";
     cin >> n;
 
@@ -25,7 +25,7 @@ int main()
     cout<<endl<<"Enter the sum to be checked: ";
     cin>>k;
 
-    for(i=0;i<n;i++)
+    for(int i=0;i<n;i++)
     {
         int sum=0;
         for(int j=0;j<n;j++)
