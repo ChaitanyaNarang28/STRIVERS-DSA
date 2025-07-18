@@ -164,7 +164,7 @@ int main()
     }
     cout<<endl;
 
-    cout<<"UNORDERED MULTI SET: ";
+    cout<<"UNORDERED MULTI-SET: ";
     unordered_multiset<int>u2;
     u2.insert(10);   //INSERT FUNCTION
     u2.insert(20);
@@ -178,6 +178,50 @@ int main()
     {
         cout<<*it<<" "; 
     }
-    cout<<endl;
+    cout<<endl<<endl;
+
+//MAPS
+    cout<<"MAPS"<<endl;
+    map<int,int>m1;
+    m1.insert(make_pair(20,30));
+    m1.insert(make_pair(30,60));
+    m1.insert(make_pair(40,30));
+    m1.insert(make_pair(20,230)); //DUPLICATE KEY
+    m1.insert(make_pair(50,10));
+    m1[100]=60;  //ANOTHER WAY OF INSERTION
+
+    cout<<"Printing all values of map: "<<endl;
+    for(auto it=m1.begin(); it!=m1.end();it++)
+    {
+        cout<<it->first<<" "<<it->second<<endl;
+    }
+
+    m1[20]=70;   //ALSO USED FOR UPDATING
+    cout<<"Printing updated values of map: "<<endl;
+    for(auto it=m1.begin(); it!=m1.end();it++)
+    {
+        cout<<it->first<<" "<<it->second<<endl;
+    }
+    cout<<"Printing values on particular key: "<<m1[100];
+    cout<<endl<<"Deleting a particular key:";
+    m1.erase(20);
+    for(auto it=m1.begin(); it!=m1.end();it++)
+    {
+        cout<<it->first<<" "<<it->second<<endl;
+    }
+
+    multimap<int,int>m2;
+    m2.insert(make_pair(20,30));
+    m2.insert(make_pair(30,60));
+    m2.insert(make_pair(40,30));
+    m2.insert(make_pair(20,230)); //DUPLICATE KEY
+    m2.insert(make_pair(50,10));
+    // m2[100]=60;  //ANOTHER WAY OF INSERTION
+
+    cout<<"Printing all values of multimap map: "<<endl;
+    for(auto it=m2.begin(); it!=m2.end();it++)
+    {
+        cout<<it->first<<" "<<it->second<<endl;
+    }
 
 }
